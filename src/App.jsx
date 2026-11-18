@@ -9,15 +9,14 @@ const App = () => {
 
   const [cart, setCart] = useState([])
 
-  const AddCart = (product) => {
-    setCart([...cart,product])
+ const AddCart = (product) => {
+  setCart((previousCart) => [...previousCart, product])
+}
 
-  }
 
 
   const [category, setCategory] = useState('all')
 
-  // TODO: Implement state for category filtering
 
   return (
     <div className= {darkMode ? 'dark' : 'light'} > 
